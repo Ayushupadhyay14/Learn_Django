@@ -1,0 +1,2 @@
+#here define how to add statiuc (css) -file from a django code:
+polls/static/polls/style.css. Because of how the AppDirectoriesFinder staticfile finder works, you can refer to this static file in Django as polls/style.css, similar to how you reference the path for templates.
