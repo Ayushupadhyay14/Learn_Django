@@ -4,9 +4,9 @@ from django.db import models
 
 
 class Profile(models.Model):
-    name = models.CharField(290)
-    email = models.CharField(290)
-    password = models.CharField(290)
+    name = models.CharField(max_length=300)
+    email = models.CharField()
+    password = models.CharField()
 
 
 # def __str__(self):

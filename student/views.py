@@ -11,13 +11,21 @@ def registration_view(request):
             nm = form.cleaned_data['name']
             em = form.cleaned_data['email']
             pw = form.cleaned_data['password']
-            # print("Name:", name)
-            # print("Email:", email)
-            # print("Password:", password)
+            print("user name is:", nm)
+            print("user email is:", em)
+            print("user password is:", pw)
 
-            # save data in data base first create a model:
-            user = Profile(name=nm, email=em, password=pw)
-            user.save()
+            # HERE USE TO A SAVING DATA - > save() method:
+            """ data = Profile(name=nm, email=em, password=pw)
+             data.save()"""
+
+# HERE USE TO UPDATE DATA FOR DATA DATA BASE -> PASS USER ID
+            """data = Profile(id=1, name=nm, email=em, password=pw)
+            data.save()"""
+
+# HERE USER TO DELETE METHODS
+            data = Profile(id=1)
+            data.delete()
             return HttpResponseRedirect('/student/Registration/')
     else:
         form = Registration()  # This must be assigned even when GET method
