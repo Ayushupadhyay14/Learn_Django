@@ -1,0 +1,146 @@
+/* Reset default browser padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Set base height and background color */
+html, body {
+  height: 100%;
+  background-color: white;
+}
+
+/* =======================
+   Navigation Bar Styling
+   ======================= */
+nav {
+  background-color: cadetblue;
+  padding: 10px 20px; /* top/bottom, left/right */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Adds shadow under navbar */
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ecf0f1; /* Light text color */
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+  background-color: #1abc9c;
+  color: floralwhite;
+}
+
+/* =====================
+   Page Heading
+   ===================== */
+.main-heading {
+  text-align: center;
+  padding: 10px;
+  font-size: 3rem;
+}
+
+/* =====================
+   Center Container
+   ===================== */
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* =====================
+   Main Form Container
+   ===================== */
+.container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Heading inside form container */
+h1 {
+  margin-top: 0;
+  font-size: 24px;
+  color: dimgrey;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   Form Styling
+   ===================== */
+form {
+  margin-bottom: 20px;
+}
+
+/* Text input fields */
+form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Submit button styling */
+form button {
+  background-color: #1abc9c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #16a085;
+}
+
+/* =====================
+   QR Code Preview Area
+   ===================== */
+.qr-preview {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.qr-preview h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.qr-preview img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Download Button for QR */
+.download-button {
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
