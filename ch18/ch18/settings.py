@@ -122,6 +122,7 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
+"""Default set cache in program"""
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CACHE_MIDDLEWARE_SECONDS = 30
 
