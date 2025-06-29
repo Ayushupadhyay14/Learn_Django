@@ -1,0 +1,93 @@
+<!-- {% extends 'student/index.html' %}
+
+{% block left_content %}
+<!-- {{form}} -->
+<form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {%if form.non_field_errors%}
+  {%for error in form.non_field_error%}
+  <p class="" alert alert-denger my-3>{{error}}</p>
+  {%endfor%}
+  {%endif%}
+  {{from.}}
+</form>
+{% endblock left_content %}
+
+{% block right_content %}
+<h4 class="text-center my-3">
+  <u>List of Candidates</u>
+</h4>
+<!-- Display dynamic data here if needed -->
+{% endblock right_content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'student/index.html' %}
+
+{% block left_content %}
+<div class="container my-4">
+  <h4 class="mb-3">Profile Form</h4>
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <!-- Non-field errors -->
+    {% if form.non_field_errors %}
+    <div class="alert alert-danger">
+      {% for error in form.non_field_errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Render form fields manually with Bootstrap styling -->
+    {% for field in form %}
+    <div class="mb-3">
+      <label class="form-label">{{ field.label_tag }}</label>
+      {{ field }}
+      {% if field.help_text %}
+      <div class="form-text">{{ field.help_text }}</div>
+      {% endif %}
+      {% for error in field.errors %}
+      <div class="text-danger">{{ error }}</div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<script>
+  //preview image on selection 
+  function previewImage(event) {
+    const=imagePreview = document.getElementById('imagePreview');
+    const file = event.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        imagePreview.src = e.target.result;
+        imagePreview.style.display = 'block'
+      }
+    }
+  }
+</script>
+{% endblock left_content %}
+
+{% block right_content %}
+<h4 class="text-center my-3">
+  <u>List of Candidates</u>
+</h4>
+<!-- You can loop through candidates and show them here -->
+{% endblock right_content %} -->
