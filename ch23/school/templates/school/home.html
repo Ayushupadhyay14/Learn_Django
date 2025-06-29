@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    table {
+      width: 80%;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h3 style="text-align: center;">Information</h3>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Roll</th>
+      <th>City</th>
+      <th>Marks</th>
+      <th>Passing Year</th>
+    </tr>
+    {% for data in all_data %}
+    <tr>
+      <td>{{ data.id }}</td>
+      <td>{{ data.name }}</td>
+      <td>{{ data.roll }}</td>
+      <td>{{ data.city }}</td>
+      <td>{{ data.marks }}</td>
+      <td>{{ data.pass_date }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+
+</html>
