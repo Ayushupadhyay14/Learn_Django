@@ -49,6 +49,7 @@ def home(request):
 
     """HERE USE DELETE METHOS TO DELETE A SPECIFIC DATA"""
     """student_data = Student.objects.get(pk=9).delete()"""
-    student_data = Student.objects.all()
+#     student_data = Student.objects.all()
+    student_data = Student.Ayush.all()
     print("return:", student_data)
     return render(request, 'student/index.html', {'students': student_data})

@@ -1,5 +1,5 @@
 from django.db import models
-
+from student.costum_manager import CostumManager
 # Create your models here.
 
 
@@ -10,5 +10,9 @@ class Student(models.Model):
     marks = models.IntegerField()
     pass_date = models.DateField()
 
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.name
+
+    """COSTUM MANAGER FOR A USER """
+    # objects = CostumManager()
+    Ayush = CostumManager()
