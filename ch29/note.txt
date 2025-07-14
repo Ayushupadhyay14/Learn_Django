@@ -1,0 +1,2 @@
+uvicorn ch29.asgi:application --reload
+https://jsonplaceholder.typicode.com/(-u use to test fake api ---)
