@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student Profile</title>
+  <style>
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #4e54c8;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Profile</h2>
+  <img src="{% static 'myapp/Ayushupadhyay-image.jpeg' %}" alt="Ayush Upadhyay" class="profile-img">
+</body>
+
+</html>
