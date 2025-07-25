@@ -1,4 +1,4 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from myapp.models import Student  # here import studemt models
 from django.views.generic import ListView, DateDetailView, CreateView, DeleteView, UpdateView
 # HERE INMPORT (GENERIC LIBARY CLSS IMPORT VIEWS)
@@ -7,5 +7,5 @@ from django.views.generic import ListView, DateDetailView, CreateView, DeleteVie
 
 class StudentCreateView(CreateView):
     model = Student
-    fields = ['name', 'email', 'roll']
     success_url = '/'
+    # Make sure this file exists

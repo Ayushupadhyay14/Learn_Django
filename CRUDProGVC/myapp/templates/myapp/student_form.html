@@ -1,3 +1,41 @@
+<!-- {% extends 'myapp/base.html' %}
+{% block title %}Add Student{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h2 class="mb-4">Add Student</h2>
+  
+  <form method="post">
+    {% csrf_token %}
+    
+    <div class="form-group">
+      <label for="id_name">Name</label>
+      <input type="text" name="name" class="form-control" id="id_name" placeholder="Enter name" value="{{ form.name.value|default_if_none:'' }}">
+      {% for error in form.name.errors %}
+        <small class="text-danger">{{ error }}</small>
+      {% endfor %}
+    </div>
+
+    <div class="form-group">
+      <label for="id_email">Email</label>
+      <input type="email" name="email" class="form-control" id="id_email" placeholder="Enter email" value="{{ form.email.value|default_if_none:'' }}">
+      {% for error in form.email.errors %}
+        <small class="text-danger">{{ error }}</small>
+      {% endfor %}
+    </div>
+
+    <div class="form-group">
+      <label for="id_roll">Roll</label>
+      <input type="text" name="roll" class="form-control" id="id_roll" placeholder="Enter roll" value="{{ form.roll.value|default_if_none:'' }}">
+      {% for error in form.roll.errors %}
+        <small class="text-danger">{{ error }}</small>
+      {% endfor %}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %} -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +46,7 @@
 </head>
 
 <body>
-  <h1>Ayush Upadhyay</h1>
+  <h1>hello</h1>
 </body>
 
 </html>
