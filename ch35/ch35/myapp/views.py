@@ -30,6 +30,6 @@ from django.core.serializers import serialize
 #     return JsonResponse(data, safe=False)
 
 
-def home_view(request):
+def home_view(request,pk):
     data = serialize('json', Student.objects.all())
     return JsonResponse(data, status=200, safe=False)
