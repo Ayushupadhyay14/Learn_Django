@@ -1,0 +1,53 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}Product Management{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="mb-4">Product Management</h1>
+  <div class="row">
+
+    <!-- Form Section -->
+    <div class="col-md-6">
+      <h2>Add a New Product</h2>
+      <form method="POST" id="product-form" novalidate>
+        {% csrf_token %}
+        <input type="hidden" name="product_id" id="product-id" value="{{ form.instance.id|default:'' }}">
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Product Title</label>
+          <input type="text" class="form-control" id="name" name="name" value="{{ form.name.value|default:'' }}"
+            required>
+        </div>
+
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control" id="price" name="price" value="{{ form.price.value|default:'' }}"
+            required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Product</button>
+      </form>
+    </div>
+
+    <!-- Product List Section -->
+    <div class="col-md-6">
+      <h2>Product List</h2>
+      <table class="table table-bordered table-striped mt-3">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="product-list">
+          <!-- Data will be populated using JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
