@@ -1,5 +1,6 @@
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -112,39 +113,43 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # LOGGIN CONFIRGRATIONS
 LOGGING = {
-    "version": 1,  # the dictConfig format version
-    "disable_existing_loggers": False,
+    'version': 1,
+    'disable_existing_loggers': False,
+
     'formatters': {
         'standard': {
-            'format': '{asctime} [{levelname}] {name}::{message}{pathname}{module}{funcName}{filename}{message}{lineno}{asctime}',
-            'style': '{',  # can be '%', '{', or '$'
+            'format': '{asctime} [{levelname}] {name}::{message} (File: {filename} | Line: {lineno})',
+            'style': '{',
             'datefmt': '%Y-%m-%d %H:%M:%S',
         },
         'simple': {
             'format': '{levelname} | Line: {lineno} | Time: {asctime} | File: {filename} | Message: {message}',
-            'style': '{',  # can be '%', '{', or '$'
+            'style': '{',
             'datefmt': '%Y-%m-%d %H:%M:%S',
         },
-        'handlers': {
-            'file': {
-                'level': 'ERROR',
-                'class': 'loggin FileHandler',
-                'filename': BASE_DIR/'logs/debug.log',
-                'formatters': 'standard'
-            },
-            'console': {
-                'level': 'ERROR',
-                'class': 'loggin StreamHandler',
-                'formatter': 'standard'
-            },
-            'loggers': {
-                '': {
-                    'handlers': ['console', 'myapp',],
-                    'level': 'DEBUG',
-                    'propagate': False
-                }
+    },
 
-            }
-        }
-    }
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',  # fixed typo: 'logging' not 'loggin'
+            'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
+            'formatter': 'simple',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+
+    'loggers': {
+        '': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
 }
+log_dir = os.path.join(BASE_DIR, 'logs')
+os.makedirs(log_dir, exist_ok=True)
