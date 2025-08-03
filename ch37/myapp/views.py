@@ -10,4 +10,4 @@ def post_list(request):
     page_obj = paginator.get_page(page_number)
     print("page object", page_obj)  # it reatur a page object :
     print("page number:", page_number)  # it reatur a page object :
-    return render(request, 'myapp/index.html', {'all_post': all_post})
+    return render(request, 'myapp/index.html', {'page_obj': page_obj})

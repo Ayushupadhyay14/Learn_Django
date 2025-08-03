@@ -11,7 +11,7 @@
   <h1>
     Home page
   </h1>
-  {%for post in all_post%}
+  {%for post in page_obj%}
   <h2>{{post.title}}</h2>
   <p>{{post.desc}}</p>
   <small>{{post.publish_date}}</small>
