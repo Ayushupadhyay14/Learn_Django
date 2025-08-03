@@ -13,7 +13,6 @@ class ContactFormView(FormView):
     form_class = ContactForm
 
     def form_valid(self, form):
-        
         print(form.cleaned_data['name'])
         print(form.cleaned_data['email'])
         print(form.cleaned_data['msg'])
