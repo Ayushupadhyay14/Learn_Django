@@ -139,7 +139,7 @@ LOGGING = {
             },
             'loggers': {
                 '': {
-                    'handlers': ['console', 'logs'],
+                    'handlers': ['console', 'myapp',],
                     'level': 'DEBUG',
                     'propagate': False
                 }

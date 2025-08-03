@@ -1,4 +1,5 @@
 # 📝 Django Logging Complete Notes
+
 ## 📘 What is Logging in Django?
 
 **Logging** is the process of recording events that happen when a program runs. Django uses Python’s built-in `logging` module to log messages for debugging, monitoring, and production diagnostics.
@@ -133,3 +134,16 @@ Action Happens → Logging Statement → Handler (File/Console/Email) → Stored
 - 📄 [Logstash](https://www.elastic.co/logstash/) – Part of the ELK stack
 - 📊 Cloudwatch / Datadog – For large-scale apps
 
+Logging Handlers (Where to send the logs)
+Django (via Python) provides multiple handlers to define where the logs go:
+
+Handler Description
+logging.StreamHandler Outputs logs to the console or terminal
+logging.FileHandler Writes logs to a file
+logging.handlers.RotatingFileHandler Same as FileHandler, but with automatic file rotation
+logging.handlers.TimedRotatingFileHandler Rotates logs based on time (e.g., daily, hourly)
+logging.NullHandler Ignores logs (useful for library packages)
+logging.SMTPHandler Sends logs via email
+logging.HTTPHandler Sends logs via HTTP POST request
+logging.SocketHandler Sends logs to a remote socket
+logging.MemoryHandler Buffers logs in memory and flushes them under certain conditions
