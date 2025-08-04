@@ -1,0 +1,4 @@
+ERROR | Line: 12 | Time: 2025-08-04 11:59:15 | File: views.py | Message: This is an error message.
+CRITICAL | Line: 13 | Time: 2025-08-04 11:59:15 | File: views.py | Message: This is a critical message.
+ERROR | Line: 12 | Time: 2025-08-04 12:12:25 | File: views.py | Message: This is an error message.
+CRITICAL | Line: 13 | Time: 2025-08-04 12:12:25 | File: views.py | Message: This is a critical message.
